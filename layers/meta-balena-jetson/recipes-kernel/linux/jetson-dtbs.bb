@@ -23,6 +23,8 @@ SRC_URI = " \
 	file://tegra186-tx2-nx-cti-NGX003.dtb \
 	file://tegra186-tx2-nx-cti-NGX003-IMX219-2CAM.dtb \
 	file://tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb \
+	file://tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb \
+	file://tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb \
 "
 
 do_install[depends] += " linux-tegra:do_deploy "
@@ -63,6 +65,8 @@ do_install:jetson-nano-emmc() {
 	install -m 0644 ${WORKDIR}/tegra210-nano-cti-NGX003.dtb ${D}/boot/tegra210-nano-cti-NGX003.dtb
 	install -m 0644 ${WORKDIR}/tegra210-nano-cti-NGX003-IMX477-2CAM.dtb ${D}/boot/tegra210-nano-cti-NGX003-IMX477-2CAM.dtb
 	install -m 0644 ${WORKDIR}/tegra210-nano-cti-NGX004.dtb ${D}/boot/tegra210-nano-cti-NGX004.dtb
+	install -m 0644 ${WORKDIR}/tegra210-nano-cti-NGX004.dtb ${D}/boot/tegra210-nano-cti-NGX004.dtb
+	install -m 0644 ${WORKDIR}/tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb ${D}/boot/tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb
 }
 
 do_install:jetson-nano-2gb-devkit() {
@@ -75,7 +79,6 @@ do_install:jetson-tx2-nx-devkit() {
 	install -m 0644 ${DEPLOY_DIR_IMAGE}/tegra186-p3636-0001-p3509-0000-a01.dtb ${D}/boot/tegra186-p3636-0001-p3509-0000-a01.dtb
 	install -m 0644 ${WORKDIR}/tegra186-tx2-nx-cti-NGX003.dtb  ${D}/boot/tegra186-tx2-nx-cti-NGX003.dtb
 	install -m 0644 ${WORKDIR}/tegra186-tx2-nx-cti-NGX003-IMX219-2CAM.dtb  ${D}/boot/tegra186-tx2-nx-cti-NGX003-IMX219-2CAM.dtb
-	install -m 0644 ${WORKDIR}/tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb  ${D}/boot/tegra186-tx2-nx-cti-NGX003-IMX477-2CAM.dtb
 	install -m 0644 ${WORKDIR}/tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb  ${D}/boot/tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb
 	install -m 0644 ${WORKDIR}/tegra186-p3636-0001-p3509-0000-a01-auvidea-jn30d.dtb  ${D}/boot/tegra186-p3636-0001-p3509-0000-a01-auvidea-jn30d.dtb
 }
@@ -111,6 +114,8 @@ FILES:${PN}:jetson-nano-emmc += " \
 	/boot/tegra210-nano-cti-NGX003.dtb \
 	/boot/tegra210-nano-cti-NGX003-IMX477-2CAM.dtb \
 	/boot/tegra210-nano-cti-NGX004.dtb \
+	/boot/tegra210-nano-cti-NGX004.dtb \
+	/boot/tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb \
 "
 
 FILES:${PN}:jetson-nano-2gb-devkit += " \
@@ -121,7 +126,6 @@ FILES:${PN}:jetson-tx2-nx-devkit += " \
 	/boot/tegra186-p3636-0001-p3509-0000-a01.dtb \
 	/boot/tegra186-tx2-nx-cti-NGX003.dtb \
 	/boot/tegra186-tx2-nx-cti-NGX003-IMX219-2CAM.dtb \
-	/boot/tegra186-tx2-nx-cti-NGX003-IMX477-2CAM.dtb \
 	/boot/tegra186-tx2-nx-cti-NGX003-ARDU-IMX477-2CAM.dtb \
 	/boot/tegra186-p3636-0001-p3509-0000-a01-auvidea-jn30d.dtb \
 "

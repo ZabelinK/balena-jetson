@@ -28,6 +28,10 @@ SRC_URI:append:jetson-tx2 = " \
     file://0001-gasket-Backport-gasket-driver-from-linux-coral.patch \
 "
 
+SRC_URI:append:jn30b-nano = " \
+    file://dram.patch \
+"
+
 SRC_URI:append:jetson-xavier-nx-devkit-seeed-2mic-hat = " \
     file://tegra194-p3668-all-p3509-0000-seeed-2mic-hat.dtb \
 "
@@ -37,7 +41,7 @@ SRC_URI:append:astro-tx2 = " \
 "
 
 SRC_URI:append:jn30b-nano = " \
-    file://tegra210-p3448-0002-p3449-0000-b00-jn30b.dtb \
+    file://tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb \
 "
 SRC_URI:append:floyd-nano = " \
     file://floyd-nano-Port-32.3.1-Floyd-patches-to-32.5.1.patch \
@@ -349,7 +353,7 @@ do_deploy:append:blackboard-tx2() {
 }
 
 do_deploy:append:jn30b-nano() {
-    cp ${WORKDIR}/tegra210-p3448-0002-p3449-0000-b00-jn30b.dtb "${DEPLOYDIR}"
+    cp ${WORKDIR}/tegra210-p3448-0002-p3449-0000-b00-wemolo.dtb "${DEPLOYDIR}"
 }
 
 do_deploy:append:photon-nano() {
